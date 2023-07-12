@@ -54,6 +54,7 @@ app.delete("/api/todos/:id", (req, res) => {
   }
 
   const removedItem = { ...todos[itemIndex] };
+
   todos.splice(itemIndex, 1);
   res.status(200).json(removedItem);
 });
